@@ -1,0 +1,19 @@
+{
+    "manifest_version" : 3, 
+    "name" : "Instagram Delay", 
+    "version": "1.0.0", 
+    "description": "Make myself wait 20 seconds before Instagram loads.",  
+    "action": { "default_title": "Instagram delay" }, 
+    "host_permissions": [
+        "*://instagram.com/*", 
+        "*://*.instagram.com/*"
+    ], 
+    "content_scripts": [
+        { 
+            "matches": ["*://instagram.com/*", "*://*.instagram.com/*"], 
+            "js": ["delay.js"], 
+            "css": ["delay.css"], 
+            "run_at": "document_start"
+       }
+    ]
+}

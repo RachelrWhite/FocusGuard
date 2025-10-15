@@ -1,0 +1,53 @@
+/* Hide the page immediately so it doesn't flash in before the timer */
+/* html { opacity: 0 !important; } */ /* Disabled for now; JS handles hide/show */
+
+/* Fullscreen overlay */
+#ig-delay-overlay { 
+    position: fixed; /* Stick to viewport, not the page flow */
+    inset: 0;        /* top/right/bottom/left = 0 (full screen) */
+    display: grid;   /* Use CSS Grid for easy centering/stretching */
+    place-items: stretch; /* Make children fill the grid area */
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; /* Clean default font stack */
+    background: rgba(0,0,0,0.85); /* Dimmed black backdrop */
+    color: white; /* Default text color inside the overlay */
+    z-index: 2147483647; /* Super high so it’s on top of everything */
+}
+
+#ig-delay-card {
+  max-width: 520px;                 /* ❗ First width cap… */
+  width: min(90vw, 520px);          /* ❗ …and responsive width up to 520px */
+  max-width: none;                  /* ⛔ Overrides max-width above (no cap) */
+  width: 100%;                      /* ⛔ Overrides width above (full width) */
+  height: 100%;                     /* Make the card fill full viewport height */
+
+  padding: 24px;                    /* Inner spacing */
+  border-radius: 16px;              /* ❗ Rounded corners… */
+  border-radius: 0;                 /* ⛔ …but this line removes rounding */
+  background: #a605eb;                 /* ❗ Solid dark background… */
+  background: rgba(208, 226, 12, 0.85);     /* ⛔ …overridden with translucent dark */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6); /* ❗ Drop shadow… */
+  box-shadow: none;                 /* ⛔ …removed (flat look) */
+  text-align: center;               /* Center inline text */
+  display: grid;                    /* Use grid to center inner content */
+  place-items: center;              /* Center children horizontally + vertically */
+}
+
+#ig-delay-count {
+  font-size: 56px;  /* Big timer text */
+  font-weight: 700; /* Bold */
+  margin: 8px 0 16px; /* Space above/below the number */
+}
+
+#ig-delay-buttons { 
+    display: flex;           /* Line up buttons horizontally */
+    gap: 12px;               /* Space between buttons */
+    justify-content: center; /* Center the button row */
+    margin-top: 8px;         /* Space above the buttons */
+}
+
+#ig-delay-buttons button { 
+    padding: 10px 14px; /* Clickable area */
+    border: 0;          /* No border */
+    border-radius: 10px;/* Soft corners */
+    cursor: pointer;    /* Pointer cursor on hover */
+}
