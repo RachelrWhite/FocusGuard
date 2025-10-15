@@ -7,7 +7,7 @@
 Focus Guard is a tiny browser extension that inserts a short, configurable delay before Instagram loads.  
 That micro-pause adds just enough friction to break the open-scroll autopilot so you can choose intentionally.
 
-## ✨ Features
+## Features
 - **10–20s countdown overlay** (fully customizable)
 - **“Skip once”** and **“Close tab”** actions
 - Works on **all** `instagram.com/*` pages (Chrome + Microsoft Edge)
@@ -16,7 +16,7 @@ That micro-pause adds just enough friction to break the open-scroll autopilot so
 
 ---
 
-## 🚀 Quick Install (Developer Mode)
+## Quick Install (Developer Mode)
 
 **Chrome**
 1. Download or clone this repo.
@@ -36,4 +36,4 @@ That micro-pause adds just enough friction to break the open-scroll autopilot so
 
 ---
 
-## 📁 Project Structure
+## Project Structure
